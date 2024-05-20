@@ -255,41 +255,6 @@ nav ul a:hover {
 .hero-text span a:hover {
   color: #147efb;
 }
-.hero-text img {
-  height: 6rem;
-  position: absolute;
-  right: 13rem;
-  top: 8.7rem;
-  width: 6rem;
-}
-@media (max-width: 900px) {
-  .hero-text img {
-    right: 3rem;
-  }
-}
-@media (max-width: 500px) {
-  .hero-text img {
-    height: 4.5rem;
-    right: 4rem;
-    top: 6.4rem;
-    width: 4.5rem;
-  }
-}
-@media (max-width: 400px) {
-  .hero-text img {
-    right: 3rem;
-  }
-}
-@media (max-width: 380px) {
-  .hero-text img {
-    right: 3rem;
-  }
-}
-@media (max-width: 375px) {
-  .hero-text img {
-    right: 1.7rem;
-  }
-}
 
 .hero-img {
   animation: pulse 12s ease-in-out infinite;
@@ -498,26 +463,9 @@ nav ul a:hover {
     display: none;
   }
 }
-.img-side span img {
-  -webkit-animation: rotate 9s linear infinite;
-  animation: rotate 9s linear infinite;
-  width: 19rem;
-}
 @media (max-width: 1020px) {
   .img-side span img {
     width: 17rem;
-  }
-}
-@-webkit-keyframes rotate {
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
-  }
-}
-@keyframes rotate {
-  to {
-    -webkit-transform: rotate(1turn);
-    transform: rotate(1turn);
   }
 }
 .img-side__main-img {
@@ -566,7 +514,7 @@ nav ul a:hover {
 
 .project {
   background-color: #f9f9f9;
-  padding: 15rem 0;
+  padding: 10rem 0;
 }
 @media (max-width: 1020px) {
   .project {
@@ -594,6 +542,16 @@ nav ul a:hover {
   font-size: 2.5rem;
   margin-bottom: 6rem;
 }
+.project a {
+  color: #767676;
+  cursor: pointer;
+  font-size: 1.7rem;
+  display: block;
+  text-align: center;
+  margin-top: 4rem;
+  /* text-decoration: none; */
+}
+
 .projects-grid {
   grid-gap: 5rem;
   display: grid;
@@ -747,6 +705,7 @@ nav ul a:hover {
   font-size: 2.6rem;
   text-align: center;
 }
+
 .date-class {
   color: hsla(0, 5%, 8%, 0.773);
   font-size: 1.4rem;
