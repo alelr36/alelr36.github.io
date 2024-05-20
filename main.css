@@ -541,16 +541,19 @@ nav ul a:hover {
   justify-content: space-between;
 }
 
-@media (max-width: 1020px) {
-  .side-title-container {
-    flex-direction: column;
-  }
-}
-
 .flag-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1020px) {
+  .side-title-container {
+    flex-direction: column;
+  }
+
+  .side-title-container .flag-container {
+    margin-bottom: 2rem;
+  }
 }
 
 .star {
