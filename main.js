@@ -1,20 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuIcon = document.querySelector(".mobile-menu");
   const mobileNav = document.querySelector(".mobile-nav");
-
-  mobileMenuIcon.addEventListener("click", () => {
-    if (mobileNav.classList.contains("closed-menu")) {
-      mobileNav.classList.remove("closed-menu");
-      mobileNav.classList.add("open-menu");
-    } else {
-      mobileNav.classList.remove("open-menu");
-      mobileNav.classList.add("closed-menu");
-    }
-  });
-
   const closeMenuIcon = document.querySelector(".tabler-icon-x");
-  closeMenuIcon.addEventListener("click", () => {
-    mobileNav.classList.remove("open-menu");
-    mobileNav.classList.add("closed-menu");
+
+  const toggleMenu = () => {
+    mobileNav.classList.toggle("closed-menu");
+    mobileNav.classList.toggle("open-menu");
+  };
+
+  mobileMenuIcon.addEventListener("click", toggleMenu);
+
+  if (closeMenuIcon) {
+    closeMenuIcon.addEventListener("click", toggleMenu);
+  }
+
+  mobileNav.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      toggleMenu();
+    }
   });
 });
